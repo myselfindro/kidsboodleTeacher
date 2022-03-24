@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:id="@+id/LLCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/RLCircle"-->
+<!--                android:layout_width="@dimen/_42sdp"-->
+<!--                android:layout_height="@dimen/_42sdp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:backgroundTint="@color/kprogresshud_grey_color"-->
+<!--                android:background="@drawable/circle_background">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/ivIcon"-->
+<!--                    android:layout_width="@dimen/_20sdp"-->
+<!--                    android:layout_height="@dimen/_20sdp"-->
+<!--                    tools:background="@color/black"-->
+<!--                    android:layout_centerInParent="true"/>-->
+<!--                -->
+<!--            </RelativeLayout>-->
+
+            <RelativeLayout
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/RLCircle"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerInParent="true"
+                android:elevation="@dimen/_4sdp"
+                android:backgroundTint="@color/kprogresshud_grey_color"
+                android:background="@drawable/circle_background">
+
+                <ImageView
+                    android:id="@+id/ivIcon"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    tools:background="@color/black"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/text_count"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:elevation="@dimen/_7sdp"
+                    android:gravity="end"
+                    android:fontFamily="@font/lato_bold"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:textColor="@color/red"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/_minus2sdp"
+                    android:text="50"
+                    android:textSize="@dimen/_16sdp"
+                    android:backgroundTint="@color/transparent" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvNameOfItem"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="wrap_content"
+                tools:text="Student Attendence"
+                android:textSize="@dimen/_9sdp"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/lato_regular"
+                android:gravity="center"
+
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

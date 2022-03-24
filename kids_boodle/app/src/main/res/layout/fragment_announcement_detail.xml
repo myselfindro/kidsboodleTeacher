@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.home.announcements.announcementhistory.AnnouncementDetail">
+
+    <TextView
+        android:id="@+id/tvAnnouncementHeading"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:text="@string/announcement"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/light_shade_of_blue"
+        android:gravity="center"
+        android:textSize="@dimen/_14sdp"/>
+    <TextView
+        android:id="@+id/tvAnnouncementDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textSize="@dimen/_13sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingStart="@dimen/_5sdp"
+        android:fontFamily="@font/lato_regular"
+        tools:text="Date : 20-10-2021"/>
+
+    <TextView
+        android:id="@+id/tvAnnouncementTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Date : 20-10-2021"
+        android:gravity="center"
+        android:textSize="@dimen/_13sdp"
+        android:fontFamily="@font/lato_bold"
+        android:padding="@dimen/_10sdp"/>
+
+    <TextView
+        android:id="@+id/tvAnnouncementContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/_10sdp"
+        android:textSize="@dimen/_12sdp"
+        android:paddingStart="@dimen/_5sdp"
+        tools:text="content"/>
+
+</LinearLayout>

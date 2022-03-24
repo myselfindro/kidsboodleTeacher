@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/tvProfileHeading"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:text="@string/students_attendance"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/light_shade_of_blue"
+        android:gravity="center"
+        android:textSize="@dimen/_14sdp"/>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:queryHint="@string/search_by_name"
+        app:iconifiedByDefault="false"
+        app:queryBackground="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        app:layout_constraintBottom_toTopOf="@id/LLHeadings"
+        app:layout_constraintTop_toBottomOf="@id/tvProfileHeading"/>
+<LinearLayout
+    android:id="@+id/LLHeadings"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="3"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:paddingTop="@dimen/_5sdp"
+    android:paddingBottom="@dimen/_10sdp"
+    app:layout_constraintTop_toBottomOf="@id/searchView">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="R No."
+        android:textSize="@dimen/_13sdp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Attendance"
+        android:gravity="center"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/lato_bold"
+        android:layout_weight="1"/>
+
+</LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvViewAttendanceList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/LLHeadings"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.kidsboodle.teacher.ui.fragment.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_announcementsFragment"
+            app:destination="@id/announcementsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_navigation_home_to_studentsFragment"
+            app:destination="@id/studentsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_navigation_home_to_timetableFragment"
+            app:destination="@id/dashboardTimetableFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_navigation_home_to_studentsAttendanceFragment"
+            app:destination="@id/studentsAttendanceFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_gradeCardFragment"
+            app:destination="@id/gradeCardFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigationLiveClass"
+            app:destination="@id/navigationLiveClass" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigationAccount"
+            app:destination="@id/navigationAccount" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigationTimeTable"
+        android:name="com.kidsboodle.teacher.ui.fragment.timetable.TimeTableFragment"
+        android:label="@string/title_time_table"
+        tools:layout="@layout/time_table_fragment" />
+
+    <fragment
+        android:id="@+id/navigationAttendance"
+        android:name="com.kidsboodle.teacher.ui.fragment.attendance.AttendanceFragment"
+        android:label="@string/title_attendance"
+        tools:layout="@layout/attendance_fragment" />
+
+    <fragment
+        android:id="@+id/navigationLiveClass"
+        android:name="com.kidsboodle.teacher.ui.fragment.liveclass.LiveClassFragment"
+        android:label="@string/title_live_class"
+        tools:layout="@layout/live_class_fragment" />
+
+    <fragment
+        android:id="@+id/navigationAccount"
+        android:name="com.kidsboodle.teacher.ui.fragment.account.AccountFragment"
+        android:label="@string/title_account"
+        tools:layout="@layout/account_fragment" />
+    <fragment
+        android:id="@+id/ChangePassword"
+        android:name="com.kidsboodle.teacher.ui.fragment.changepassword.ChangePasswordFragment"
+        android:label="@string/title_account"
+        tools:layout="@layout/account_fragment" />
+    <fragment
+        android:id="@+id/announcementsFragment"
+        android:name="com.kidsboodle.teacher.ui.fragment.home.announcements.AnnouncementsFragment"
+        android:label="@string/announcement"
+        tools:layout="@layout/fragment_announcements" />
+    <fragment
+        android:id="@+id/studentsFragment"
+        android:name="com.kidsboodle.teacher.ui.fragment.home.students.StudentsFragment"
+        android:label="@string/students">
+        <action
+            android:id="@+id/action_studentsFragment_to_studentCheckFragment"
+            app:destination="@id/studentCheckFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentCheckFragment"
+        android:name="com.kidsboodle.teacher.ui.fragment.home.students.StudentCheckFragment"
+        android:label="@string/check_student">
+        <action
+            android:id="@+id/action_studentCheckFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardTimetableFragment"
+        android:name="com.kidsboodle.teacher.ui.fragment.home.timetable.TimetableFragment"
+        android:label="@string/title_time_table"
+        tools:layout="@layout/fragment_dashboard_timetable" />
+    <fragment
+        android:id="@+id/gradeCardFragment"
+        android:name="com.kidsboodle.teacher.ui.fragment.home.gradecard.GradeCardFragment"
+        android:label="GradeCardFragment" />
+    <fragment
+        android:id="@+id/studentsAttendanceFragment"
+        android:name="com.kidsboodle.teacher.ui.fragment.home.studentsattendence.StudentsAttendanceFragment"
+        android:label="StudentsAttendanceFragment">
+        <action
+            android:id="@+id/action_studentsAttendanceFragment_to_updateAttendanceListFragment"
+            app:destination="@id/updateAttendanceListFragment" />
+        <action
+            android:id="@+id/action_studentsAttendanceFragment_to_viewAttendanceListFragment"
+            app:destination="@id/viewAttendanceListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateAttendanceFragment"
+        android:name="com.kidsboodle.teacher.ui.fragment.home.studentsattendence.updateattendance.UpdateAttendanceFragment"
+        android:label="UpdateAttendanceFragment">
+
+    </fragment>
+    <fragment
+        android:id="@+id/updateAttendanceListFragment"
+        android:name="com.kidsboodle.teacher.ui.fragment.home.studentsattendence.updateattendance.updatelist.UpdateAttendanceListFragment"
+        android:label="UpdateAttendanceListFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.kidsboodle.teacher.ui.fragment.home.profile.ProfileFragment"
+        android:label="ProfileFragment">
+        <argument
+            android:name="StudentDetails"
+            app:argType="com.kidsboodle.teacher.data.model.homefragment.students.StudentViewDetailsItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewAttendanceListFragment"
+        android:name="com.kidsboodle.teacher.ui.fragment.home.studentsattendence.viewattendance.attendancelist.ViewAttendanceListFragment"
+        android:label="ViewAttendanceListFragment" />
+</navigation>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CLAttendanceListItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_5sdp">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        app:buttonTint="@color/checkbox_tint"
+        android:id="@+id/checkBoxStudent"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:layout_marginStart="@dimen/_2sdp"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintStart_toEndOf="@id/checkBoxStudent">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tvStudentName"-->
+    <!--            android:layout_width="@dimen/_140sdp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            tools:text="Name - Subhajit Dasssssssss"-->
+    <!--            android:textSize="@dimen/_12sdp"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:ellipsize="end"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintVertical_bias="0.5"-->
+    <!--            app:layout_constraintStart_toEndOf="@id/checkBoxStudent"/>-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tvStudentRoll"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            tools:text="Roll No - 07"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="@dimen/_12sdp"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/tvStudentName"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@id/checkBoxStudent"-->
+    <!--            app:layout_constraintStart_toEndOf="@id/checkBoxStudent"/>-->
+
+    <!--    </LinearLayout>-->
+
+    <TextView
+        android:id="@+id/tvStudentRoll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_5sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/checkBoxStudent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="07" />
+
+
+    <TextView
+        android:id="@+id/tvStudentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="@id/tvStudentRoll"
+        app:layout_constraintEnd_toStartOf="@id/LLCheckboxPA"
+        app:layout_constraintTop_toTopOf="@id/tvStudentRoll"
+        app:layout_constraintStart_toEndOf="@id/tvStudentRoll"
+        tools:text="Subhajit Das" />
+
+
+    <RadioGroup
+        android:id="@+id/LLCheckboxPA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnStudentRemark"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioButtonPresent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="P"
+            app:buttonTint="@color/checkbox_tint"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAbsent"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="A"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/black"
+            app:buttonTint="@color/checkbox_tint"
+            android:outlineSpotShadowColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RadioGroup>
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/LLCheckboxPA"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        android:layout_marginEnd="@dimen/_4sdp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toStartOf="@id/btnStudentRemark">-->
+    <!--        <com.google.android.material.checkbox.MaterialCheckBox-->
+    <!--            android:id="@+id/checkBoxPresent"-->
+    <!--            android:layout_width="@dimen/_32sdp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:text="P"-->
+    <!--            app:buttonTint="@color/deep_grey"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            android:layout_marginStart="@dimen/_5sdp"/>-->
+    <!--        -->
+
+    <!--        <com.google.android.material.checkbox.MaterialCheckBox-->
+    <!--            android:id="@+id/checkBoxAbsent"-->
+    <!--            android:layout_width="@dimen/_32sdp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:text="A"-->
+    <!--            app:buttonTint="@color/deep_grey"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            android:layout_marginStart="@dimen/_5sdp"/>-->
+    <!--    </LinearLayout>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/btnStudentRemark"-->
+<!--        android:layout_width="@dimen/_60sdp"-->
+<!--        android:layout_height="@dimen/_25sdp"-->
+<!--        android:layout_marginEnd="@dimen/_2sdp"-->
+<!--        android:background="@drawable/bg_orange_button_"-->
+<!--        android:gravity="center"-->
+<!--        android:text="Remarks"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <TextView
+        android:id="@+id/btnStudentRemark"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:background="@drawable/ic_write_remarks"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

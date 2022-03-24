@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Each item id should be same as in the nav_graph fragment id-->
+
+    <item
+        android:id="@+id/gradeCardFragment"
+        android:title="@string/grade"
+        android:icon="@drawable/ic_grade_card" />
+
+    <item
+        android:id="@+id/navigationLiveClass"
+        android:title="@string/liveclasses"
+        android:icon="@drawable/ic_live_class_image" />
+
+    <item
+        android:id="@+id/announcementsFragment"
+        android:title="@string/announcement"
+        android:icon="@drawable/ic_announcement" />
+
+
+    <item
+        android:id="@+id/studentsAttendanceFragment"
+        android:title="@string/title_attendance"
+        android:icon="@drawable/ic_attendance" />
+
+    <item
+        android:id="@+id/studentsFragment"
+        android:title="@string/students"
+        android:icon="@drawable/ic_teacher_drawer"/>
+
+    <item
+        android:id="@+id/dashboardTimetableFragment"
+        android:title="@string/timetable"
+        android:icon="@drawable/ic_time_table"
+       />
+
+    <item
+        android:id="@+id/navigationAccount"
+        android:title="@string/profile"
+        android:icon="@drawable/ic_profile"/>
+
+    <item
+        android:id="@+id/ChangePassword"
+        android:title="@string/change_password"
+        android:icon="@drawable/ic_change_password_white"/>
+
+    <item
+        android:id="@+id/LogOut"
+        android:title="@string/logOut"
+        android:icon="@drawable/ic_log_out_white"/>
+
+</menu>

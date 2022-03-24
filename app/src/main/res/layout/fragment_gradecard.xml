@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_illustration">
+
+        <TextView
+            android:id="@+id/tvStudentsHeading"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@color/light_shade_of_blue"
+            android:gravity="center"
+            android:text="Grade Card"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCurve"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toBottomOf="@id/tvStudentsHeading"
+            app:srcCompat="@drawable/header_curve" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:rotationY="180"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/kid" />
+
+        <LinearLayout
+            android:id="@+id/LLFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="vertical"
+            android:weightSum="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivAvatar">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:endIconDrawable="@drawable/ic_baseline_keyboard_arrow_down_24">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/autoCompleteClass"
+                    style="@style/custom_autoCompleteTextView_White"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:fontFamily="@font/lato_bold"
+                    android:inputType="none"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:text="@string/select_class"
+                    android:textSize="@dimen/dropdown_text_size" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:endIconDrawable="@drawable/ic_baseline_keyboard_arrow_down_24">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/autoCompleteSection"
+                    style="@style/custom_autoCompleteTextView_White"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lato_bold"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:text="@string/select_section"
+                    android:textSize="@dimen/dropdown_text_size"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:endIconDrawable="@drawable/ic_baseline_keyboard_arrow_down_24">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/autoCompleteSelectStudent"
+                    style="@style/custom_autoCompleteTextView_White"
+                    android:layout_width="match_parent"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:textSize="@dimen/dropdown_text_size"
+                    android:textColor="@color/black"
+                    android:text="@string/select_student" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:endIconDrawable="@drawable/ic_baseline_keyboard_arrow_down_24">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/autoCompleteSelectExam"
+                    style="@style/custom_autoCompleteTextView_White"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lato_bold"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:text="@string/select_exam"
+                    android:textSize="@dimen/dropdown_text_size"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--            <com.google.android.material.textfield.TextInputLayout-->
+            <!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="@dimen/_45sdp"-->
+            <!--                android:layout_marginStart="@dimen/_10sdp"-->
+            <!--                android:layout_marginTop="@dimen/_10sdp"-->
+            <!--                android:layout_marginEnd="@dimen/_10sdp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                app:boxStrokeWidth="0dp"-->
+            <!--                app:boxStrokeWidthFocused="0dp"-->
+            <!--                android:background="@drawable/background_box"-->
+            <!--                app:endIconDrawable="@drawable/ic_baseline_keyboard_arrow_down_24">-->
+
+            <!--                <AutoCompleteTextView-->
+            <!--                    android:id="@+id/autoCompleteSelectStudent"-->
+            <!--                    style="@style/custom_autoCompleteTextView"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:paddingStart="@dimen/_8sdp"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:layout_weight="1"-->
+            <!--                    android:textSize="@dimen/_13sdp"-->
+            <!--                    android:inputType="none"-->
+            <!--                    android:fontFamily="@font/lato_bold"-->
+            <!--                    android:text="Select student" />-->
+
+
+            <!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+
+        </LinearLayout>
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/btnCheckGradeCard"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="@dimen/_35sdp"-->
+        <!--            android:layout_marginStart="@dimen/_80sdp"-->
+        <!--            android:layout_marginTop="@dimen/_20sdp"-->
+        <!--            android:layout_marginEnd="@dimen/_80sdp"-->
+        <!--            android:layout_marginBottom="@dimen/_20sdp"-->
+        <!--            android:background="@drawable/button_orange"-->
+        <!--            android:fontFamily="@font/lato_medium"-->
+        <!--            android:text="Check"-->
+        <!--            android:gravity="center"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="@dimen/_14sdp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/LLFields"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCheckGradeCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_50sdp"
+            app:layout_constraintVertical_bias="0"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:fontFamily="@font/lato_bold"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="@string/check"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            app:backgroundTint="@color/button_orange"
+            app:cornerRadius="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/LLFields" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

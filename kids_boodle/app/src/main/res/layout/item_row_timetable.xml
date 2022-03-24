@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/CLTimeTable"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/LLSubjectName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        android:paddingTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvSubjectName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/lato_bold"
+            android:maxLength="15"
+            android:ellipsize="end"
+            tools:text="History and Geography"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LLClassName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        app:layout_constraintStart_toStartOf="@id/LLSubjectName"
+        app:layout_constraintTop_toBottomOf="@id/LLSubjectName">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/lato_regular"
+            android:textColor="@color/shade_of_blue"
+            android:layout_gravity="center_vertical"
+            android:text="Class - "/>
+
+        <TextView
+            android:id="@+id/tvClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/lato_regular"
+            android:textColor="@color/shade_of_blue"
+            tools:text="IV-A"/>
+
+    </LinearLayout>
+    
+<!--    <TextView-->
+<!--        android:id="@+id/btnStartLiveClass"-->
+<!--        android:layout_width="@dimen/_95sdp"-->
+<!--        android:layout_height="@dimen/_30sdp"-->
+<!--        android:gravity="end|center"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textStyle="bold"-->
+<!--        android:paddingEnd="@dimen/_15sdp"-->
+<!--        android:layout_marginEnd="@dimen/_6sdp"-->
+<!--        android:background="@drawable/btn_start_live_class"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+    <TextView
+        android:id="@+id/tvClassTiming"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="wrap_content"
+        tools:text="9.30 AM\n to \n11.00 AM"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/btnStartLiveClass"
+        android:layout_width="@dimen/_65sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:background="@drawable/bg_orange_without_stroke"
+        android:backgroundTint="@color/light_red"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:paddingStart="@dimen/_6sdp"
+        android:paddingEnd="@dimen/_6sdp"
+        android:textSize="@dimen/_11sdp"
+        android:text="@string/start"
+        android:layout_marginEnd="@dimen/_6sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:drawableTint="@color/white"
+        app:drawableStartCompat="@drawable/ic_baseline_remove_red_eye_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

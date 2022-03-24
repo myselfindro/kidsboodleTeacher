@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/_10sdp"
+    android:paddingBottom="@dimen/_10sdp"
+    android:id="@+id/LLItem"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvDate"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        tools:text="Date : 2021-09-01"-->
+<!--        android:textSize="@dimen/_12sdp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvPresentStatus"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        tools:text="Present Status : Absent"-->
+<!--        android:textSize="@dimen/_12sdp" />-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:weightSum="2"-->
+<!--        android:layout_marginBottom="@dimen/_2sdp"-->
+<!--        android:layout_marginTop="@dimen/_5sdp">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/btnTeacherRemarks"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="@dimen/_25sdp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Teacher Remarks"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:layout_marginEnd="@dimen/_5sdp"-->
+<!--            android:background="@drawable/bg_orange_button_"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/btnStudentRemarks"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="@dimen/_25sdp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Student Remarks"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:layout_marginStart="@dimen/_5sdp"-->
+<!--            android:background="@drawable/bg_orange_button_"/>-->
+
+<!--    </LinearLayout>-->
+
+    <TextView
+        android:id="@+id/tvRollNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/_12sdp"
+        tools:text="25152"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/_12sdp"
+        tools:text="25152"/>
+
+    <TextView
+        android:id="@+id/tvAttendance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/_12sdp"
+        tools:text="222222"/>
+
+</LinearLayout>

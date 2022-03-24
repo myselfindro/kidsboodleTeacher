@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:baselineAligned="false">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_created_by"
+                    style="@style/custom_autoCompleteTextView_Pure_White"
+                    android:layout_width="match_parent"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/dropdown_text_size"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:textColor="@color/black"
+                    android:text="@string/select_class" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/_45sdp"-->
+<!--            android:layout_marginStart="@dimen/_10sdp"-->
+<!--            android:layout_marginTop="@dimen/_10sdp"-->
+<!--            android:layout_marginEnd="@dimen/_10sdp"-->
+<!--            app:endIconDrawable="@drawable/ic_baseline_keyboard_arrow_down_24">-->
+
+<!--            <AutoCompleteTextView-->
+<!--                android:id="@+id/autoCompleteAnnouncementTitle"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@color/grey"-->
+<!--                android:inputType="none"-->
+<!--                android:text="Announcement title" />-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_date"
+                style="@style/custom_autoCompleteTextView_Pure_White"
+                android:layout_width="match_parent"
+                android:paddingStart="@dimen/_8sdp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:inputType="none"
+                android:focusable="false"
+                android:textSize="@dimen/dropdown_text_size"
+                android:textColor="@color/black"
+                android:text="@string/select_student" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/_45sdp"-->
+<!--            android:layout_marginStart="@dimen/_10sdp"-->
+<!--            android:layout_marginTop="@dimen/_10sdp"-->
+<!--            android:layout_marginEnd="@dimen/_10sdp"-->
+<!--            app:boxStrokeWidth="0dp"-->
+<!--            app:boxStrokeWidthFocused="0dp"-->
+<!--            app:endIconDrawable="@drawable/ic_baseline_keyboard_arrow_down_24">-->
+
+<!--            <androidx.appcompat.widget.AppCompatEditText-->
+<!--                android:id="@+id/autoCompleteAnnouncementTitle"-->
+<!--                style="@style/custom_autoCompleteTextView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:paddingStart="@dimen/_8sdp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:textSize="@dimen/_13sdp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textColorHint="@color/black"-->
+<!--                android:hint="@string/announcement_title" />-->
+
+
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtAnnouncementTitle"
+            style="@style/custom_autoCompleteTextView_Pure_White"
+            android:layout_width="match_parent"
+            android:paddingStart="@dimen/_8sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textSize="@dimen/dropdown_text_size"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:hint="@string/announcement_title" />
+
+
+
+        <TextView
+            android:id="@+id/txtAnnouncementDescription"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/box_with_pure_white_bg"
+            android:gravity="start"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="italic"
+            android:hint="@string/type_your_announcement"
+            android:padding="@dimen/_10sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/box_with_pure_white_bg"
+                android:paddingEnd="@dimen/_40sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:paddingStart="@dimen/_40sdp"
+                android:weightSum="3"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivAddImage1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:src="@drawable/ic_add_image"
+                    />
+
+                <ImageView
+                    android:id="@+id/ivAddImage2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:src="@drawable/ic_add_image"
+                    />
+
+                <ImageView
+                    android:id="@+id/ivAddImage3"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_add_image"
+                    />
+            </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_publish"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_80sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_80sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/button_orange"
+            android:fontFamily="@font/lato_bold"
+            android:text="Done"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/button_text_size"
+            android:textStyle="bold"/>
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btnCheckAttendance"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginTop="@dimen/_20sdp"-->
+<!--            android:layout_marginBottom="@dimen/_20sdp"-->
+<!--            android:fontFamily="@font/lato_bold"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:paddingTop="@dimen/_10sdp"-->
+<!--            android:paddingBottom="@dimen/_10sdp"-->
+<!--            android:text="@string/publish"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textSize="@dimen/_14sdp"-->
+<!--            app:backgroundTint="@color/button_orange"-->
+<!--            app:cornerRadius="@dimen/_8sdp"-->
+<!--            android:layout_marginEnd="@dimen/_50sdp"-->
+<!--            android:layout_marginStart="@dimen/_50sdp"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/LLFields"/>-->
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

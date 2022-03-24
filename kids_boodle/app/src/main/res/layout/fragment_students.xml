@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_illustration">
+
+        <TextView
+            android:id="@+id/tvStudentsHeading"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:text="@string/students"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/light_shade_of_blue"
+            android:gravity="center"
+            android:textSize="@dimen/_14sdp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCurve"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/header_curve"
+            app:layout_constraintTop_toBottomOf="@id/tvStudentsHeading"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_avater"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_100sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/LLFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_30sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivAvatar"
+            android:weightSum="3">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:endIconDrawable="@drawable/ic_baseline_keyboard_arrow_down_24">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/autoCompleteSelectClass"
+                    style="@style/custom_autoCompleteTextView_White"
+                    android:focusable="false"
+                    android:layout_width="match_parent"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/dropdown_text_size"
+                    android:inputType="none"
+                    android:text="@string/select_class" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:endIconDrawable="@drawable/ic_baseline_keyboard_arrow_down_24">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/autoCompleteSelectSection"
+                    style="@style/custom_autoCompleteTextView_White"
+                    android:layout_width="match_parent"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:textSize="@dimen/dropdown_text_size"
+                    android:inputType="none"
+                    android:text="@string/select_section" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/_45sdp"-->
+<!--                android:layout_marginStart="@dimen/_10sdp"-->
+<!--                android:layout_marginTop="@dimen/_10sdp"-->
+<!--                android:layout_marginEnd="@dimen/_10sdp"-->
+<!--                android:layout_weight="1"-->
+<!--                app:boxStrokeWidth="0dp"-->
+<!--                app:boxStrokeWidthFocused="0dp"-->
+<!--                android:background="@drawable/dropdown_bg"-->
+<!--                app:endIconDrawable="@drawable/ic_baseline_keyboard_arrow_down_24">-->
+
+<!--                <AutoCompleteTextView-->
+<!--                    android:id="@+id/autoCompleteSelectStudent"-->
+<!--                    style="@style/custom_autoCompleteTextView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:paddingStart="@dimen/_8sdp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:background="@drawable/background_box"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:textSize="@dimen/_13sdp"-->
+<!--                    android:inputType="none"-->
+<!--                    android:text="@string/select_student" />-->
+
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+
+        </LinearLayout>
+
+<!--        <TextView-->
+<!--            android:id="@+id/btnCheck"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/_35sdp"-->
+<!--            android:layout_marginStart="@dimen/_80sdp"-->
+<!--            android:layout_marginTop="@dimen/_20sdp"-->
+<!--            android:layout_marginEnd="@dimen/_80sdp"-->
+<!--            android:layout_marginBottom="@dimen/_20sdp"-->
+<!--            android:background="@drawable/button_orange"-->
+<!--            android:fontFamily="@font/lato_medium"-->
+<!--            android:text="@string/check"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="@dimen/_14sdp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/LLFields"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/_70sdp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/white"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="@string/check"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_14sdp"
+            app:backgroundTint="@color/button_orange"
+            app:cornerRadius="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_50sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/LLFields"/>
+
+        <!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/ic_right_arrow"-->
+<!--            app:layout_constraintTop_toTopOf="@id/btnCheck"-->
+<!--            app:layout_constraintEnd_toEndOf="@id/btnCheck"-->
+<!--            app:layout_constraintStart_toStartOf="@id/btnCheck"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/btnCheck"-->
+<!--            app:layout_constraintHorizontal_bias="0.76"-->
+<!--            android:backgroundTint="@color/white"/>-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

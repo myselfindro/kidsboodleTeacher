@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_illustration"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.home.timetable.TimetableFragment">
+
+    <TextView
+        android:id="@+id/tvTimetableHeading"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:text="@string/timetable"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/light_shade_of_blue"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/_14sdp"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayoutTimeTable"
+        style="@style/MyCustomTabLayoutTimetable"
+        android:layout_width="match_parent"
+        app:tabPadding="@dimen/_5sdp"
+        android:background="@color/deep_blue"
+        android:layout_height="@dimen/_34sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimetableHeading"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="fixed"
+        app:tabTextAppearance="@style/tab_text"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager_timetable"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tablayoutTimeTable"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
