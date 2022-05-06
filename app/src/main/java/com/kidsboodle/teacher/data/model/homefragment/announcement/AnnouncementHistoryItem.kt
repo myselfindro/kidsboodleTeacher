@@ -19,7 +19,7 @@ data class AnnouncementHistoryItem(
 
 data class ResultItems(
 
-    @field:SerializedName("teacher")
+    @field:SerializedName("created_by")
     val school_user: String? = null,
 
 

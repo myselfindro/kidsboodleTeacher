@@ -28,7 +28,7 @@ class ApiHelper(private val apiService: ApiService) {
 
 
     suspend fun getTeacherClassSectionList(authToken: String, Class: String, section: String, page:Int, pageSize:Int) =
-        apiService._getTeacherClassSectionList(authToken, Class, "21", page, pageSize)
+        apiService._getTeacherClassSectionList(authToken, Class, section, page, pageSize)
 
     suspend fun getAnnouncementHistoryList(authToken: String, page:Int, pageSize:Int) =
         apiService._getAnnouncementHistoryList(authToken, page, pageSize)

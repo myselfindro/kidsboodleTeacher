@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/upcomingmainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:divider="?android:dividerHorizontal"
+        android:orientation="vertical"
+        android:showDividers="end"
+        tools:context=".ui.liveclass.upcoming">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvupcomingdateclass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Date:-"
+            android:textColor="@color/black50"
+            android:textSize="@dimen/_15sdp" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvlvtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Time:-"
+            android:textColor="@color/black50"
+            android:textSize="@dimen/_15sdp" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvupcomingsub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Subject:-"
+            android:textColor="@color/black50"
+            android:textSize="@dimen/_15sdp" />
+
+
+        <Button
+            android:id="@+id/lvjoinbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_7sdp"
+            android:background="@drawable/rounded_corner_yellow"
+            android:text="Join" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

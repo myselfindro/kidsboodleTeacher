@@ -60,7 +60,7 @@ class StudentsFragment : Fragment() {
 //        (context as MainActivity).changeBackButton()
 //        (context as MainActivity).setToolbarLeftIcon(null)
 
-        (context as MainActivity).displayHomeUpORHamburger(true)
+        (context as MainActivity).displayHomeUpORHamburger(false)
 
         (context as MainActivity).changeToolbarTitle("Little Star")
 //        (context as MainActivity).makeScreenTitleToLeft(true)

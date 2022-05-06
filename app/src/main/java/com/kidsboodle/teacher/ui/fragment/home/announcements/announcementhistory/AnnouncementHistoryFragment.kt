@@ -77,8 +77,6 @@ class AnnouncementHistoryFragment() : Fragment(),
                     when (resource.status) {
                         Status.SUCCESS -> {
                             hideLoader(loader)
-
-
                             if (resource.data?.requestStatus?.equals(1) == true) {
                                 historyList=resource.data
                                 setUpAnnouncementHistoryRecyclerAdapter()

@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class LoginRequest(
     @field:SerializedName("auth_provider")
-    val authProvider: String = "schooluser",
+    val authProvider: String = "teacher",
 
     @field:SerializedName("username")
     val username: String? = null,

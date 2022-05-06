@@ -24,6 +24,7 @@ import com.kidsboodle.teacher.R
 import com.kidsboodle.teacher.databinding.ActivityMainBinding
 import com.kidsboodle.teacher.ui.activity.login.LoginActivity
 import com.kidsboodle.teacher.utility.goToActivity
+import kotlinx.android.synthetic.main.custom_toolbar.view.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 

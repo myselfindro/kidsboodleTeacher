@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName
 data class ForgotPasswordPhoneRequest (
 
     @field:SerializedName("auth_provider")
-    val authProvider: String = "schooluser",
+    val authProvider: String = "teacher",
 
     @field:SerializedName("phone")
     val phone: String? = null,

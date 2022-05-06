@@ -1,11 +1,13 @@
 package com.kidsboodle.teacher.ui.fragment.home.announcements.createannouncement
 
 import android.Manifest
+import android.content.ContentValues.TAG
 import android.content.pm.PackageManager
 import android.database.Cursor
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -327,8 +329,7 @@ class CreateAnnouncementsFragment : Fragment(), BSImagePicker.OnSingleImageSelec
     }
 
 
-    fun getStudentSectionList(
-        auth: String = PreferenceManager.getUserToken(requireContext()),
+    fun getStudentSectionList(auth: String = PreferenceManager.getUserToken(requireContext()),
         Class: String,
         section: String,
         pageCount: Int,
@@ -338,22 +339,19 @@ class CreateAnnouncementsFragment : Fragment(), BSImagePicker.OnSingleImageSelec
         createAnnouncementViewModel.getTeacherClassSectionList(auth, Class, section, pageCount, pageSize)
             .observe(this, {
                 it?.let { resource ->
+                    Log.d(TAG, "sectionresponse->"+resource.data)
                     when (resource.status) {
                         Status.SUCCESS -> {
                             hideLoader(loader)
                             sectionList.clear()
                             sectionListValue.clear()
                             if (resource.data?.requestStatus?.equals(1) == true) {
-
                                 for (i in it.data?.result!!) {
                                     sectionList.add("Section - ${i?.sectionName!!}")
                                     sectionListValue.add(i.id.toString())
                                 }
                                 val sectionAdapter = ArrayAdapter(
-                                    requireContext(),
-                                    R.layout.dropdown_menu_item,
-                                    sectionList
-                                )
+                                    requireContext(), R.layout.dropdown_menu_item, sectionList)
                                 binding.autoCompleteSection.setAdapter(sectionAdapter)
 
 

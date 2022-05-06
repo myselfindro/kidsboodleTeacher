@@ -3,6 +3,36 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/drawable/bgbutton.xml" value="0.123" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/drawable/border.xml" value="0.1545" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/drawable/ic_arrow.xml" value="0.1" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/drawable/ic_back.xml" value="0.123" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/activity_landing.xml" value="0.22" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/activity_login.xml" value="0.20102564102564102" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/activity_studentdetails.xml" value="0.22" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/activity_successfull_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/attendance_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/fragment_announcements.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/fragment_announcements_history.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/fragment_dashboard.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/fragment_dashboard_timetable.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/fragment_home.xml" value="0.18518518518518517" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/fragment_monday.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/fragment_profile.xml" value="0.18518518518518517" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/fragment_student_check.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/fragment_students.xml" value="0.18518518518518517" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/fragment_students_attendance.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/fragment_update_attendance.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/fragment_update_attendance_list.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/fragment_view_attendance.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/fragment_view_attendance_list.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/item_row_check_student.xml" value="0.25" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/item_row_dashboard_rounded_items.xml" value="0.33" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/item_row_timetable.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/live_class_fragment.xml" value="0.25" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/teacher_liveclass_list.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/layout/time_table_fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Projects/TeacherV4/kids_boodle/app/src/main/res/menu/drawer_nav.xml" value="0.20416666666666666" />
         <entry key="..\:/ShaymSteelProject/tonmoy-sardar-boodle_android-7d1426ce1f64/tonmoy-sardar-boodle_android-7d1426ce1f64/app/src/main/res/layout/activity_change_password.xml" value="0.17798913043478262" />
         <entry key="..\:/ShaymSteelProject/tonmoy-sardar-boodle_android-7d1426ce1f64/tonmoy-sardar-boodle_android-7d1426ce1f64/app/src/main/res/layout/activity_forgot_password.xml" value="0.14739583333333334" />
         <entry key="..\:/ShaymSteelProject/tonmoy-sardar-boodle_android-7d1426ce1f64/tonmoy-sardar-boodle_android-7d1426ce1f64/app/src/main/res/layout/activity_main.xml" value="0.25661538461538463" />

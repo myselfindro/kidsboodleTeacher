@@ -17,7 +17,7 @@ data class TeacherDashboardDetailsResponse(
 data class TeacherDetails(
 
 	@field:SerializedName("school")
-	val school: Int? = null,
+	val school: String? = null,
 
 	@field:SerializedName("last_name")
 	val lastName: String? = null,

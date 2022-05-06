@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class MobileVerifyRequest (
         @field:SerializedName("auth_provider")
-        val authProvider: String = "schooluser",
+        val authProvider: String = "teacher",
 
         @field:SerializedName("dial_code")
         val dialCode: String? = "+91",

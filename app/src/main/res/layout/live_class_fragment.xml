@@ -1,97 +1,301 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_illustration"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragment.liveclass.LiveClassFragment">
 
     <TextView
         android:id="@+id/tvLiveClassHeading"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_30sdp"
-        android:text="@string/title_live_class"
-        android:textColor="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
         android:background="@color/light_shade_of_blue"
         android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="@dimen/_14sdp"/>
-
-    <TextView
-        android:id="@+id/tvSubjectName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="@dimen/_10sdp"
-        android:paddingEnd="@dimen/_10sdp"
-        android:paddingTop="@dimen/_5sdp"
-        android:textSize="@dimen/_14sdp"
-        app:layout_constraintTop_toBottomOf="@+id/tvLiveClassHeading"
-        android:text="Math"/>
-
-    <TextView
-        android:id="@+id/tvTeacherName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="@dimen/_10sdp"
-        android:paddingEnd="@dimen/_10sdp"
-        android:paddingTop="@dimen/_5sdp"
-        android:paddingBottom="@dimen/_5sdp"
-        android:textSize="@dimen/_14sdp"
-        android:textColor="@color/shade_of_blue"
-        app:layout_constraintTop_toBottomOf="@+id/tvSubjectName"
-        android:text="Mr. Sujay Bose"/>
-
-    <ImageView
-        android:id="@+id/ivImage"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_150sdp"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_10sdp"
-        android:background="@color/deep_yellow"
-        app:layout_constraintTop_toBottomOf="@id/tvTeacherName"/>
-
-    <TextView
-        android:layout_width="@dimen/_140sdp"
-        android:layout_height="@dimen/_40sdp"
-        android:text="Join Live Class"
-        android:gravity="center"
-        android:textSize="@dimen/_12sdp"
-        android:fontFamily="@font/lato_bold"
-        android:paddingStart="@dimen/_20sdp"
-        android:paddingEnd="@dimen/_8sdp"
-        android:drawableStart="@drawable/ic_live_class"
-        android:background="@drawable/bg_orange_without_stroke"
-        android:backgroundTint="@color/yellow_light_dark"
-        app:layout_constraintTop_toTopOf="@id/ivImage"
-        app:layout_constraintBottom_toBottomOf="@id/ivImage"
-        app:layout_constraintEnd_toEndOf="@id/ivImage"
-        app:layout_constraintStart_toStartOf="@id/ivImage"/>
-
-
-    <TextView
-        android:id="@+id/btnStartLiveClass"
-        android:layout_width="@dimen/_70sdp"
-        android:layout_height="@dimen/_25sdp"
-        android:background="@drawable/bg_orange_without_stroke"
-        android:backgroundTint="@color/light_red"
+        android:text="@string/title_live_class"
         android:textColor="@color/white"
-        android:gravity="center"
-        android:layout_marginEnd="@dimen/_10sdp"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_nav"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tvLiveClassHeading">
+
+        <TextView
+            android:id="@+id/btnCreate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/deep_yellow"
+            android:gravity="center"
+            android:text="Create Class"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+
+        <TextView
+            android:id="@+id/btnHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="List"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_createclass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@+id/ll_nav">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spClass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_14sdp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spSection"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_14sdp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spRoutine"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_14sdp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/startDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@null"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:drawableRight="@drawable/ic_calendar"
+                android:drawablePadding="@dimen/_10sdp"
+                android:drawableTint="@color/black50"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="dd-mm-yyy"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@android:color/black"
+                android:textColorHint="#888A8C"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etZoomlink"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@null"
+                android:drawablePadding="@dimen/_10sdp"
+                android:hint="Zoom Link"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="@android:color/black"
+                android:textColorHint="#888A8C"
+                android:textSize="@dimen/_12sdp" />
+            <!--                    android:drawableRight="@drawable/ic_vector" />-->
+
+        </LinearLayout>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCreateclass"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="Create"
+            android:backgroundTint="@color/deep_yellow"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="@dimen/_8sdp" />
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvclassHistory"
+        app:layout_constraintTop_toBottomOf="@+id/ll_nav"
+        android:visibility="gone"
         android:layout_marginTop="@dimen/_10sdp"
-        android:paddingStart="@dimen/_6sdp"
-        android:paddingEnd="@dimen/_6sdp"
-        android:textSize="@dimen/_12sdp"
-        android:text="@string/live"
-        android:textAllCaps="true"
-        android:fontFamily="@font/lato_bold"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintTop_toTopOf="@id/ivImage"
-        app:layout_constraintEnd_toEndOf="@id/ivImage"
-        app:layout_constraintBottom_toBottomOf="@id/ivImage"
-        app:drawableTint="@color/white"
-        app:drawableEndCompat="@drawable/ic_baseline_remove_red_eye_24" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tvSubjectName"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:paddingStart="@dimen/_10sdp"-->
+    <!--        android:paddingEnd="@dimen/_10sdp"-->
+    <!--        android:paddingTop="@dimen/_5sdp"-->
+    <!--        android:textSize="@dimen/_14sdp"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tvLiveClassHeading"-->
+    <!--        android:text="Math"/>-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tvTeacherName"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:paddingStart="@dimen/_10sdp"-->
+    <!--        android:paddingEnd="@dimen/_10sdp"-->
+    <!--        android:paddingTop="@dimen/_5sdp"-->
+    <!--        android:paddingBottom="@dimen/_5sdp"-->
+    <!--        android:textSize="@dimen/_14sdp"-->
+    <!--        android:textColor="@color/shade_of_blue"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tvSubjectName"-->
+    <!--        android:text="Mr. Sujay Bose"/>-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/ivImage"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="@dimen/_150sdp"-->
+    <!--        android:layout_marginStart="@dimen/_10sdp"-->
+    <!--        android:layout_marginEnd="@dimen/_10sdp"-->
+    <!--        android:background="@color/deep_yellow"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/tvTeacherName"/>-->
+
+    <!--    <TextView-->
+    <!--        android:layout_width="@dimen/_140sdp"-->
+    <!--        android:layout_height="@dimen/_40sdp"-->
+    <!--        android:text="Join Live Class"-->
+    <!--        android:gravity="center"-->
+    <!--        android:textSize="@dimen/_12sdp"-->
+    <!--        android:fontFamily="@font/lato_bold"-->
+    <!--        android:paddingStart="@dimen/_20sdp"-->
+    <!--        android:paddingEnd="@dimen/_8sdp"-->
+    <!--        android:drawableStart="@drawable/ic_live_class"-->
+    <!--        android:background="@drawable/bg_orange_without_stroke"-->
+    <!--        android:backgroundTint="@color/yellow_light_dark"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/ivImage"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@id/ivImage"-->
+    <!--        app:layout_constraintEnd_toEndOf="@id/ivImage"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/ivImage"/>-->
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/btnStartLiveClass"-->
+    <!--        android:layout_width="@dimen/_70sdp"-->
+    <!--        android:layout_height="@dimen/_25sdp"-->
+    <!--        android:background="@drawable/bg_orange_without_stroke"-->
+    <!--        android:backgroundTint="@color/light_red"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:gravity="center"-->
+    <!--        android:layout_marginEnd="@dimen/_10sdp"-->
+    <!--        android:layout_marginTop="@dimen/_10sdp"-->
+    <!--        android:paddingStart="@dimen/_6sdp"-->
+    <!--        android:paddingEnd="@dimen/_6sdp"-->
+    <!--        android:textSize="@dimen/_12sdp"-->
+    <!--        android:text="@string/live"-->
+    <!--        android:textAllCaps="true"-->
+    <!--        android:fontFamily="@font/lato_bold"-->
+    <!--        app:layout_constraintVertical_bias="0"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/ivImage"-->
+    <!--        app:layout_constraintEnd_toEndOf="@id/ivImage"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@id/ivImage"-->
+    <!--        app:drawableTint="@color/white"-->
+    <!--        app:drawableEndCompat="@drawable/ic_baseline_remove_red_eye_24" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

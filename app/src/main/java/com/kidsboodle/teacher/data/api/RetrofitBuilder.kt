@@ -7,7 +7,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitBuilder {
    // private const val BASE_URL = "http://148.66.128.232:8002/"
-    private const val BASE_URL = "https://kidboodle.com/api/"
+//    private const val BASE_URL = "https://kidboodle.com/api/"
+    private const val BASE_URL = "http://3.17.248.213:8002/"
 
 
  /*   username:souvik.test@gmail.com

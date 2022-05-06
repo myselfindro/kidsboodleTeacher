@@ -53,27 +53,27 @@
                     android:id="@+id/ivIcon"
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
-                    tools:background="@color/black"
-                    android:layout_centerInParent="true"/>
+                    android:layout_centerInParent="true"
+                    tools:background="@color/black" />
 
             </RelativeLayout>
 
                 <TextView
                     android:id="@+id/text_count"
-                    android:layout_width="@dimen/_24sdp"
-                    android:layout_height="@dimen/_24sdp"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
                     android:elevation="@dimen/_7sdp"
-                    android:gravity="end"
+                    android:gravity="center"
                     android:fontFamily="@font/lato_bold"
                     android:visibility="gone"
+                    android:background="@drawable/bgbutton"
                     android:layout_marginEnd="@dimen/_4sdp"
                     android:textColor="@color/red"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginTop="@dimen/_minus2sdp"
                     android:text="50"
-                    android:textSize="@dimen/_16sdp"
-                    android:backgroundTint="@color/transparent" />
+                    android:textSize="@dimen/_10sdp"/>
 
             </RelativeLayout>
 

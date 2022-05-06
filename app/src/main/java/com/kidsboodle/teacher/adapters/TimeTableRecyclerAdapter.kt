@@ -1,6 +1,8 @@
 package com.kidsboodle.teacher.adapters
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.NavController
@@ -43,7 +45,7 @@ class TimeTableRecyclerAdapter(
             }
 
             binding.tvSubjectName.text = item?.subject
-            val classSection = "${item?.sclClass} - ${item?.section}"
+            val classSection = "${item?.className} - ${item?.section}"
             binding.tvClass.text = classSection
             var startTime = 0
             var endTime = 0
@@ -76,6 +78,24 @@ class TimeTableRecyclerAdapter(
             val timing =
                 "${"$startTime:$startTimeMin $textAM_PM"}\n to \n${"$endTime:$endTimeMin $textEndAM_PM"}"
             binding.tvClassTiming.text = timing
+
+            val zoomlink = item?.zoomLink
+            binding.btnStartLiveClass.setOnClickListener {
+                if (zoomlink == null) {
+                    val browserIntent = Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("https://zoom.us/")
+                    )
+                    context.startActivity(browserIntent)
+                } else {
+                    val browserIntent = Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse(zoomlink)
+                    )
+                    context.startActivity(browserIntent)
+                }
+
+            }
 
         }
     }
