@@ -75,5 +75,7 @@ dependencies {
     implementation 'com.kaopiz:kprogresshud:1.2.0'
     implementation 'hu.autsoft:krate:1.0.0'
     implementation 'com.karumi:dexter:6.2.3'
+    implementation 'com.github.scottyab:showhidepasswordedittext:0.8'
+
 
 }
